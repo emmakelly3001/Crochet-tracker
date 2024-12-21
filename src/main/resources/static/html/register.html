@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script> <!-- Added defer to load JS after HTML -->
+</head>
+<body>
+<div class="login-container">
+    <h2>Create an Account</h2>
+    <!-- Add autocomplete="on" to the form element -->
+    <form id="register-form" action="/api/register" method="POST" autocomplete="on">
+        <!-- Add autocomplete values to input fields -->
+        <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email">
+        <input type="text" name="username" id="username" placeholder="Username" required autocomplete="username">
+        <input type="password" name="password" id="password" placeholder="Password" required autocomplete="new-password">
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- Error message will be displayed here -->
+    <div id="error-message" style="color: red; display: none;"></div>
+
+    <!-- Link to login page -->
+    <div class="register-container">
+        <p>Already have an account? <a href="login.html">Sign in here</a></p>
+    </div>
+</div>
+</body>
+</html>

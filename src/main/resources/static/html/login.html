@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script> <!-- Ensure this is the correct path for your JS -->
+</head>
+<body>
+<div class="login-container">
+    <h2>Please sign in</h2>
+    <form action="/api/auth/login" method="POST">
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Error message displayed if the login fails -->
+    <div id="error-message" style="color: red; display: none;"></div>
+
+    <div class="register-container">
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+</div>
+</body>
+</html>

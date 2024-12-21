@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Projects</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="../js/home.js"></script>
+</head>
+<body>
+
+<div class="home-container">
+    <h2>Your Projects</h2>
+
+    <!-- Button to add a new project -->
+    <button id="add-project-btn">+</button>
+
+    <!-- The list of projects -->
+    <div id="project-list" class="project-list">
+        <!-- Projects will be added here dynamically -->
+    </div>
+
+    <!-- Logout Button with CSS -->
+    <form action="/logout" method="POST">
+        <button type="submit" class="logout-btn">Logout</button>
+    </form>
+
+
+
+</div>
+
+<!-- Project Form Modal (Hidden initially) -->
+<div id="project-form-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-modal-btn">&times;</span>
+        <h3>Create a New Project</h3>
+        <form id="project-form">
+            <label for="project-name">Project Name</label>
+            <input type="text" id="project-name" name="project-name" required>
+
+            <label for="project-description">Project Description</label>
+            <textarea id="project-description" name="project-description" required></textarea>
+
+            <button type="submit">Create Project</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
